@@ -38,3 +38,21 @@ Bornat, Richard, et al. “Mental Models, Consistency and Programming Aptitude.�
 -examinations occur in UK and Australia' this is a worldwide problem
 -failure of students to form a mental model of simple assignment shows a lack of ability to generalize concepts
 -not necessarily a large correlation between consistent mental models and passing the course
+
+Hosseini, Roya, et al. “Animated Examples as Practice Content in a Java Programming Course.” Animated Examples as Practice Content in a Java Programming Course | Proceedings of the 47th ACM Technical Symposium on Computing Science Education, ACM, 1 Feb. 2016, dl.acm.org/doi/pdf/10.1145/2839509.2844639. -studies effectiveness between students using annotated code v code visualization
+-annotated code is a code snippet wjhere each line is explained
+-program visualization is interactive software that ghelps students see how an executing program works graphically
+-students are more successful when they practice more but are typically unmotivated to do extra practice
+-mandatory practice results in an disengaged clicking through
+-want optional and helpful tools that students will want to use
+-students using Jeliot 3 for visualization of their own Java code has had a positive correlation on their results in class
+-Jsvee shows intermediate steps of each line of code
+-more annotated example viewed than annotated but there were many more annotated examples to view, but students spent more time angaging with the animated examples
+-can skip lines in annotated example but animation doesnt allow for random acceess of lines
+-there is a negative correlation between how many annotated example ere viewd an d the success rate of wehich a studnet answered the problems
+-20% of times after failure swtudents accessed annotated code, but 4% of time accessede animated
+-data analysis concludes that the animated examples resulted in better learning for the students
+-the better the student did on the pretest the better they did onb the posttest
+-positive correlation between amount of work and performan ce for animated examples
+-each annotated example used decreased post test score while each aniomated example used increased the post test score
+-large positive correlation between course grade and num of distinct animated examples a student used while the opposite is again true for annotated
