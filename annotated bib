@@ -20,3 +20,21 @@ Thomas, Stewart J, et al. “Recruiting VR Troopers: Bringing Introductory Progr
 -Creating a 3D scene gives students a challenge and an opportunity to be creative
 -students engage with a complex library while workung with VR
 -engaging with VR greatly increased students'interest in programming
+
+Bornat, Richard, et al. “Mental Models, Consistency and Programming Aptitude.” Acm, Proc. Tenth Australasian Computing Education Conference, 2008, dl.acm.org/doi/pdf/10.5555/1379249.1379253?download=true. -introductory programming failure rates have increased despite research
+-programming is not widely taught before college so people dont know if they have the capacity for programming beforehand
+-distribution of grades in CS1 is very bimodal
+-if one knows how their program works they'll be more successful
+-no evidence that simpler langs and IDEs have improved novice success rates
+-common to build programs top down but experts build them bottom up
+-mental model is an understanding of something in which certain things are true
+-understanding something requires a mental model to have been developed
+-Two important programming concepts that are hard for beginners are assignment and sequence &amp; recursion and iteration
+-tests students' mental; mmodels of assignment and sequence to 30 students in week 0 with no previous programming knowledge but they do have algebraic knowledge
+-27 students (44%) were consistent in which mental model they used but in the groupo some used wrong mental models
+-didnt collect background on subjects nor interviewed them afterwardes to gather thought process
+-17 /90 swtudents ghad dropped course by week 3 which makes data collection lesss accurtate
+-more complicated problems required more attempted mental models brfore a correct model is formed
+-examinations occur in UK and Australia' this is a worldwide problem
+-failure of students to form a mental model of simple assignment shows a lack of ability to generalize concepts
+-not necessarily a large correlation between consistent mental models and passing the course
