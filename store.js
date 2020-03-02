@@ -23,41 +23,48 @@ export function changeState(newState) {
 
 	if (currState == 1)
 	{
-		State.counter = State.counter + 1;
+		if(State.counter + 1 <= 9)
+		{
+			State.counter = State.counter + 1;
+		}
 
-		if(State.counter <= 4) {
+		if(State.counter <= 5) {
 			State.sl1Cntr = 0;
 		} else {
 			State.sl1Cntr = 1;
 		}
 
-		if(State.counter <= 6) {
+		if(State.counter <= 7) {
 			State.i = 0;
 		} else if(State.counter <= 10) {
 			State.i = 1;
 		}
 		  
-		if(State.counter <= 7) {
+		if(State.counter <= 8) {
 			State.j = 0;
 		} else if(State.counter <= 10) {
 			State.j = 1;
 		}
 	} else {
-		State.counter = State.counter - 1;
 
-		if(State.counter <= 4) {
+		if(State.counter - 1 >= 0)
+		{
+			State.counter = State.counter - 1;
+		}
+
+		if(State.counter <= 5) {
 			State.sl1Cntr = 0;
 		} else {
 			State.sl1Cntr = 1;
 		}
 
-		if(State.counter <= 6) {
+		if(State.counter <= 7) {
 			State.i = 0;
 		} else if(State.counter <= 10) {
 			State.i = 1;
 		}
 		  
-		if(State.counter <= 7) {
+		if(State.counter <= 8) {
 			State.j = 0;
 		} else if(State.counter <= 10) {
 			State.j = 1;
