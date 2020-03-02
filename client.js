@@ -11,25 +11,25 @@ function init(bundle, parent, options = {}) {
   });
 
   const commentPanel = new Surface(
-    500, 
-    500, 
+    1000, 
+    600, 
     Surface.SurfaceShape.Flat
   );
 
   commentPanel.setAngle(
-    0.7, 
-    0.4
+    0.3, 
+    0.0
   )
 
   const codePanel = new Surface(
-    500, 
-    500, 
+    1000, 
+    600, 
     Surface.SurfaceShape.Flat
   );
 
   codePanel.setAngle(
-    -0.7, 
-    -0.2
+    -0.3, 
+    -0.0
   )
 
   r360.renderToSurface(
@@ -47,4 +47,3 @@ function init(bundle, parent, options = {}) {
 }
 
 window.React360 = {init};
-
