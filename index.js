@@ -87,13 +87,63 @@ _prev = () => {
 
 render() {
     return (
-<View style={styles.panel}>
+<React.Fragment>
+      <View style={styles.panel}>
 	<View style = {styles.greetingBox}>
 	  <Text style={styles.greeting}>
-	    Box2
+            {`i = ${this.state.i}  j = ${this.state.j}`}
+          </Text>
+	</View>
+	<VrButton
+	  onClick = {this._next}
+	  style = {styles.greetingBox}>
+          <Text style={styles.greeting}>
+	    Next
+	  </Text>
+	</VrButton>
+	<VrButton
+	  onClick = {this._prev}
+	  style = {styles.greetingBox}>
+          <Text style={styles.greeting}>
+	    Back
+	  </Text>
+	</VrButton>
+	<View style = {styles.greetingBox}>
+          <Text style={styles.greeting}>
+	    {`Comments: ${comments[`${this.state.counter}`]}`}
 	  </Text>
 	</View>
-</View>
+	<View style = {styles.greetingBox}>
+          <Text style={styles.greeting}>
+            {'char appt[] = "Wednesday 4pm";'}
+          </Text>
+	  <Text style={styles.greeting}>
+            {'char newDay[] = "Monday";'}
+          </Text>
+	  <Text style={styles.greeting}>
+            {'char newTime[] = "8pm";'}
+          </Text>
+	  <Text style={styles.greeting}>
+            {`int i = 0;`}
+          </Text>
+	  <Text style={styles.greeting}>
+            {`for (int j = 0; j < ${strlen1[`${this.state.sl1Cntr}`]}; j++)`}
+          </Text>
+	  <Text style={styles.greeting}>
+            {'appt[i++] = newDay[j];'}
+          </Text>
+	  <Text style={styles.greeting}>
+            {'for (int k = 0; k < strlen(newTime); k++)'}
+          </Text>
+	  <Text style={styles.greeting}>
+              {'appt[i++] = newTime[k];'}
+	  </Text>
+	  <Text style={styles.greeting}>
+            {'printf("%s\\n", appt);'}
+          </Text>
+        </View>
+      </View>
+</React.Fragment>
       
     );
   }
@@ -156,13 +206,63 @@ _prev = () => {
 render() {
     return (
 
-<View style={styles.panel}>
+<React.Fragment>
+      <View style={styles.panel}>
 	<View style = {styles.greetingBox}>
 	  <Text style={styles.greeting}>
-	    Box2
+            {`i = ${this.state.i}  j = ${this.state.j}`}
+          </Text>
+	</View>
+	<VrButton
+	  onClick = {this._next}
+	  style = {styles.greetingBox}>
+          <Text style={styles.greeting}>
+	    Next
+	  </Text>
+	</VrButton>
+	<VrButton
+	  onClick = {this._prev}
+	  style = {styles.greetingBox}>
+          <Text style={styles.greeting}>
+	    Back
+	  </Text>
+	</VrButton>
+	<View style = {styles.greetingBox}>
+          <Text style={styles.greeting}>
+	    {`Comments: ${comments[`${this.state.counter}`]}`}
 	  </Text>
 	</View>
-</View>
+	<View style = {styles.greetingBox}>
+          <Text style={styles.greeting}>
+            {'char appt[] = "Wednesday 4pm";'}
+          </Text>
+	  <Text style={styles.greeting}>
+            {'char newDay[] = "Monday";'}
+          </Text>
+	  <Text style={styles.greeting}>
+            {'char newTime[] = "8pm";'}
+          </Text>
+	  <Text style={styles.greeting}>
+            {`int i = 0;`}
+          </Text>
+	  <Text style={styles.greeting}>
+            {`for (int j = 0; j < ${strlen1[`${this.state.sl1Cntr}`]}; j++)`}
+          </Text>
+	  <Text style={styles.greeting}>
+            {'appt[i++] = newDay[j];'}
+          </Text>
+	  <Text style={styles.greeting}>
+            {'for (int k = 0; k < strlen(newTime); k++)'}
+          </Text>
+	  <Text style={styles.greeting}>
+              {'appt[i++] = newTime[k];'}
+	  </Text>
+	  <Text style={styles.greeting}>
+            {'printf("%s\\n", appt);'}
+          </Text>
+        </View>
+      </View>
+</React.Fragment>
     );
   }
 };
@@ -170,7 +270,7 @@ render() {
 const styles = StyleSheet.create({
   panel: {
     // Fill the entire surface
-    width: 500,
+    width: 1000,
     height: 600,
     backgroundColor: 'rgba(255, 255, 255, 0.4)',
     justifyContent: 'center',
@@ -188,3 +288,4 @@ const styles = StyleSheet.create({
 
 AppRegistry.registerComponent('Comment', () => Comment);
 AppRegistry.registerComponent('Code', () => Code);
+
