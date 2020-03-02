@@ -17,7 +17,7 @@ function init(bundle, parent, options = {}) {
   );
 
   commentPanel.setAngle(
-    0.3, 
+    0.4, 
     0.0
   )
 
@@ -28,17 +28,17 @@ function init(bundle, parent, options = {}) {
   );
 
   codePanel.setAngle(
-    -0.3, 
+    -0.4, 
     -0.0
   )
 
   r360.renderToSurface(
-    r360.createRoot('Comment', {/*initial props*/}),
+    r360.createRoot('ConnectedComment', {/*initial props*/}),
     commentPanel
   );
 
   r360.renderToSurface(
-    r360.createRoot('Code', {/*initial props*/}),
+    r360.createRoot('ConnectedCode', {/*initial props*/}),
     codePanel
   );
 
