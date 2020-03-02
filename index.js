@@ -1,6 +1,8 @@
 import React from 'react';
 import {
+  asset,
   AppRegistry,
+  Enviroment,
   StyleSheet,
   Text,
   View,
@@ -30,7 +32,7 @@ const strlen2 = [
 "3",
 ];
 
-export default class Hello360 extends React.Component {
+export class Code extends React.Component {
 state = {
   counter: 0,
   i: 0,
@@ -85,63 +87,82 @@ _prev = () => {
 
 render() {
     return (
-<React.Fragment>
-      <View style={styles.panel}>
+<View style={styles.panel}>
 	<View style = {styles.greetingBox}>
 	  <Text style={styles.greeting}>
-            {`i = ${this.state.i}  j = ${this.state.j}`}
-          </Text>
-	</View>
-	<VrButton
-	  onClick = {this._next}
-	  style = {styles.greetingBox}>
-          <Text style={styles.greeting}>
-	    Next
-	  </Text>
-	</VrButton>
-	<VrButton
-	  onClick = {this._prev}
-	  style = {styles.greetingBox}>
-          <Text style={styles.greeting}>
-	    Back
-	  </Text>
-	</VrButton>
-	<View style = {styles.greetingBox}>
-          <Text style={styles.greeting}>
-	    {`Comments: ${comments[`${this.state.counter}`]}`}
+	    Box2
 	  </Text>
 	</View>
+</View>
+      
+    );
+  }
+};
+
+
+export class Comment extends React.Component {
+state = {
+  counter: 0,
+  i: 0,
+  j: 0,
+  k: 0,
+  sl1Cntr: 0,
+};
+
+_next= () => {
+  this.setState({counter: this.state.counter + 1});
+
+  if((this.state.counter + 1) <= 4) {
+	this.setState({sl1Cntr: 0});
+  } else {
+	this.setState({sl1Cntr: 1});
+  }
+
+  if((this.state.counter + 1) <= 6) {
+	this.setState({i: 0});
+  } else if((this.state.counter + 1) <= 10) {
+	this.setState({i: 1});
+  }
+  
+  if((this.state.counter + 1) <= 7) {
+	this.setState({j: 0});
+  } else if((this.state.counter + 1) <= 10) {
+	this.setState({j: 1});
+  }
+};  
+
+_prev = () => {
+  this.setState({counter: this.state.counter - 1});
+
+  if((this.state.counter - 1) <= 4) {
+	this.setState({sl1Cntr: 0});
+  } else {
+	this.setState({sl1Cntr: 1});
+  }
+
+  if((this.state.counter - 1) <= 6) {
+	this.setState({i: 0});
+  } else if((this.state.counter - 1) <= 10) {
+	this.setState({1: 1});
+  }
+
+  if((this.state.counter - 1) <= 7) {
+	this.setState({j: 0});
+  } else if((this.state.counter - 1) <= 10) {
+	this.setState({j: 1});
+  }
+};  
+
+render() {
+    return (
+
+<View style={styles.panel}>
 	<View style = {styles.greetingBox}>
-          <Text style={styles.greeting}>
-            {'char appt[] = "Wednesday 4pm";'}
-          </Text>
 	  <Text style={styles.greeting}>
-            {'char newDay[] = "Monday";'}
-          </Text>
-	  <Text style={styles.greeting}>
-            {'char newTime[] = "8pm";'}
-          </Text>
-	  <Text style={styles.greeting}>
-            {`int i = 0;`}
-          </Text>
-	  <Text style={styles.greeting}>
-            {`for (int j = 0; j < ${strlen1[`${this.state.sl1Cntr}`]}; j++)`}
-          </Text>
-	  <Text style={styles.greeting}>
-            {'appt[i++] = newDay[j];'}
-          </Text>
-	  <Text style={styles.greeting}>
-            {'for (int k = 0; k < strlen(newTime); k++)'}
-          </Text>
-	  <Text style={styles.greeting}>
-              {'appt[i++] = newTime[k];'}
+	    Box2
 	  </Text>
-	  <Text style={styles.greeting}>
-            {'printf("%s\\n", appt);'}
-          </Text>
-        </View>
-      </View>
-</React.Fragment>
+	</View>
+</View>
     );
   }
 };
@@ -149,7 +170,7 @@ render() {
 const styles = StyleSheet.create({
   panel: {
     // Fill the entire surface
-    width: 1000,
+    width: 500,
     height: 600,
     backgroundColor: 'rgba(255, 255, 255, 0.4)',
     justifyContent: 'center',
@@ -165,4 +186,5 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('Hello360', () => Hello360);
+AppRegistry.registerComponent('Comment', () => Comment);
+AppRegistry.registerComponent('Code', () => Code);
