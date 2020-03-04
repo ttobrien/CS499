@@ -122,76 +122,218 @@ export class Code extends React.Component {
 
 	colorState5()
 	{
-		let text = [];
-		if(this.props.counter == 5) {
-			text.push(
-				<Text style={{display: "inline", fontSize: 30, color: "white"}}>
-		            {`for (`}
-		            <Text style={{display: "inline", fontSize: 30, color: "yellow"}}>
-		            		{'int j = 0; '}
-		            	<Text style={{display: "inline", fontSize: 30, color: "white"}}>
-		            		{'j < strlen(newDay); '}
-		            		<Text style={{display: "inline", fontSize: 30, color: "white"}}>
-		            			{'j++)'}
-		        			</Text>
-		        		</Text>
-		        	</Text>
-		     	</Text>
+		let m = [];
+		if(this.props.counter == 5)
+		{
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'for ('} 
+  				</Text> 
 			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'int j = 0;'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'j < strlen(newDay);'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'j++'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{')'} 
+  				</Text> 
+			)
+
 		} else if(this.props.counter == 6) {
-			text.push(
-				<Text style={{display: "inline", fontSize: 30, color: "white"}}>
-		            {`for (`}
-		            <Text style={{display: "inline", fontSize: 30, color: "white"}}>
-		            		{'int j = 0; '}
-		            	<Text style={{display: "inline", fontSize: 30, color: "yellow"}}>
-		            		{'j < strlen(newDay); '}
-		            		<Text style={{display: "inline", fontSize: 30, color: "white"}}>
-		            			{'j++)'}
-		        			</Text>
-		        		</Text>
-		        	</Text>
-		     	</Text>
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'for ('} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'int j = 0;'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'j < strlen(newDay);'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'j++'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{')'} 
+  				</Text> 
+			)
+		} else if(this.props.counter == 9) {
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'for ('} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'int j = 0; '} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'j < strlen(newDay);'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'j++'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{')'} 
+  				</Text> 
 			)
 		} else {
-			text.push(
-				<Text style={{display: "inline", fontSize: 30}}>
-		            {`for (`}
-		            <Text style={{display: "inline", fontSize: 30}}>
-		            	{'int j = 0; '}
-		            	<Text style={{display: "inline", fontSize: 30}}>
-		            		{'j < strlen(newDay); '}
-		            		<Text style={{display: "inline", fontSize: 30}}>
-		            			{'j++)'}
-		        			</Text>
-		        		</Text>
-		        	</Text>
-		     	</Text>
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'for ('} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'int j = 0;'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'j < strlen(newDay);'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'j++'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{')'} 
+  				</Text> 
 			)
 		}
-		return text;
+		
+		return m;
 	};
+
+	colorState6()
+	{
+		let m = [];
+		if(this.props.counter == 7)
+		{
+			m.push(
+				<Text style={styles.colored}> 
+  					{'appt\['} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'i'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'++'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'\] = newDay[j];'} 
+  				</Text> 
+			)
+
+		} else if(this.props.counter == 8) {
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'appt\['} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'i'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'++'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'\] = newDay[j];'} 
+  				</Text> 
+			)
+		} else {
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'appt\['} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'i'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'++'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'\] = newDay[j];'} 
+  				</Text> 
+			)
+		}
+		
+		return m;
+	};	
 
 	render() {
 	    return (
-	 		
-			<View style = {styles.greetingBox1}>
-		        { this.colorState1() }
-			  	{ this.colorState2() }
-				{ this.colorState3() }
-			  	{ this.colorState4() }
-				{ this.colorState5() }
-			  
-			  	<Text style={styles.greeting}>
-		            {'for (int k = 0; k < strlen(newTime); k++)'}
-		        </Text>
-			  <Text style={styles.greeting}>
-		              {'\t\t\tappt[i++] = newTime[k];'}
-			  </Text>
-			  <Text style={styles.greeting}>
-		            {'printf("%s\\n", appt);'}
-		       </Text>
-		     
+	 		<View style = {styles.panelCode}>
+				<View style = {styles.greetingBox1}>
+			        { this.colorState1() }
+				  	{ this.colorState2() }
+					{ this.colorState3() }
+				  	{ this.colorState4() }
+				</View>
+				<View style = {styles.forLoop}>
+				  	{ this.colorState5() }
+				</View>
+				<View style = {styles.forLoop}>
+				  	{ this.colorState6() }
+				</View>
+
+				<View style = {styles.greetingBox1}>
+					<Text style={styles.greeting}>
+			            {'for (int k = 0; k < strlen(newTime); k++)'}
+			        </Text>
+				  <Text style={styles.greeting}>
+			              {"\t\tappt[i++] = newTime[k];"}
+				  </Text>
+				  <Text style={styles.greeting}>
+			            {'printf("%s\\n", appt);'}
+			       </Text>
+		     	</View>
 		    </View>   
 	    );
 	}
@@ -476,7 +618,7 @@ export class Stack extends React.Component {
 	b12()
 	{
 		let text = [];
-		if(this.props.counter == 1) {
+		if((this.props.counter == 1) || (this.props.counter == 7) ) {
 			text.push(
 				 <Text style = {styles.colored}> 
 				 	{`${data[`${this.props.counter}`][12]}`} 
@@ -615,6 +757,12 @@ export class Stack extends React.Component {
 				 	{`${data[`${this.props.counter}`][19]}`} 
 				 </Text> 
 			)
+		} else if(this.props.counter == 7) {
+			text.push(
+				 <Text style = {styles.green}> 
+				 	{`${data[`${this.props.counter}`][19]}`} 
+				 </Text> 
+			)
 		} else {
 			text.push(
 				 <Text style = {styles.greeting}> 
@@ -704,7 +852,7 @@ export class Stack extends React.Component {
 	b24()
 	{
 		let text = [];
-		if(this.props.counter == 4) {
+		if((this.props.counter == 4) || (this.props.counter == 8)) {
 			text.push(
 				 <Text style = {styles.colored}> 
 				 	{`${data[`${this.props.counter}`][24]}`} 
@@ -780,7 +928,7 @@ export class Stack extends React.Component {
 	b28()
 	{
 		let text = [];
-		if(this.props.counter == 5) {
+		if((this.props.counter == 5) || (this.props.counter == 9)) {
 			text.push(
 				 <Text style = {styles.colored}> 
 				 	{`${data[`${this.props.counter}`][28]}`} 
@@ -1004,6 +1152,13 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(255, 255, 255, 0.4)',
     justifyContent: 'center',
   },
+  panelCode: {
+    // Fill the entire surface
+    width: 700,
+    height: 400,
+    backgroundColor: 'rgba(255, 255, 255, 0.4)',
+    alignItems: 'stretch',
+  },
   panelBig: {
     // Fill the entire surface
     width: 1000,
@@ -1023,6 +1178,13 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#639dda',
   },
+  forLoop: {
+    padding: 2,
+    backgroundColor: '#000000',
+    borderColor: '#639dda',
+    display: 'flex',
+    flexDirection: 'row'
+  },
   colored: {
     fontSize: 30,
     color: 'yellow'
@@ -1030,6 +1192,11 @@ const styles = StyleSheet.create({
   greeting: {
   	fontSize: 30
   },
+  green: {
+    fontSize: 30,
+    color: 'green'
+  },
+  
  });
 
 AppRegistry.registerComponent('ConnectedComment', () => ConnectedComment);
