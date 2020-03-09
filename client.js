@@ -17,13 +17,29 @@ function init(bundle, parent, options = {}) {
   );
 
   commentPanel.setAngle(
-    0.95, 
+    0.8, 
     0.2
   )
 
   r360.renderToSurface(
     r360.createRoot('ConnectedComment', {/*initial props*/}),
     commentPanel
+  );
+
+  const varPanel = new Surface(
+    1000, 
+    600, 
+    Surface.SurfaceShape.Flat
+  );
+
+  varPanel.setAngle(
+    -0.3, 
+    0.2
+  )
+
+  r360.renderToSurface(
+    r360.createRoot('ConnectedVar', {/*initial props*/}),
+    varPanel
   );
 
   const codePanel = new Surface(
@@ -33,8 +49,8 @@ function init(bundle, parent, options = {}) {
   );
 
   codePanel.setAngle(
-    0.25,
-    0.10
+    0.1,
+    0.1
   )
 
   r360.renderToSurface(
@@ -49,7 +65,7 @@ function init(bundle, parent, options = {}) {
   );
 
   controlPanel.setAngle(
-    0.4, 
+    0.3, 
     0.3
   )
 
@@ -65,7 +81,7 @@ function init(bundle, parent, options = {}) {
   );
 
   stackPanel.setAngle(
-    0.1, 
+    0.0, 
     -0.1
   )
 
