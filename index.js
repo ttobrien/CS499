@@ -11,7 +11,6 @@ import {
   View,
   VrButton,
 } from 'react-360';
-
 import { connect, changeState} from './store'
 
 const comments = [
@@ -41,6 +40,80 @@ const data = [
 "/mp-yadsendeM/yadnoM/mp810001000--------",
 
 ];
+
+export class Var extends React.Component {
+
+	_appt= () => {
+		changeState(2);
+	};  
+
+	_newDay= () => {
+		changeState(3);
+	};  
+
+	_newTime= () => {
+		changeState(4);
+	};  
+
+	getButtons()
+	{
+		let buttons = [];
+
+		buttons.push(
+			<Text style = {styles.greeting}>
+	    		Variables
+	    	</Text>
+	    )
+
+		if(this.props.counter >= 1) {
+			buttons.push(
+				<VrButton
+		          onClick = {this._appt}
+		          style = {styles.buttonBox1}>
+		            <Text style={styles.greeting}>
+		               appt
+		            </Text>
+		        </VrButton>
+			)
+		}
+
+		if(this.props.counter >= 2) {
+			buttons.push(
+				<VrButton
+		          onClick = {this._newDay}
+		          style = {styles.buttonBox2}>
+		            <Text style={styles.greeting}>
+		               newDay
+		            </Text>
+		        </VrButton>
+			)
+		}
+
+		if(this.props.counter >= 3) {
+			buttons.push(
+				<VrButton
+		          onClick = {this._newTime}
+		          style = {styles.buttonBox3}>
+		            <Text style={styles.greeting}>
+		               newTime
+		            </Text>
+		        </VrButton>
+			)
+		}
+
+		return buttons;
+	};
+
+	render() {
+	    return (
+	    	<View style = {styles.panel1}>
+		        { this.getButtons() }
+			</View>
+	    );
+	}
+
+};
+
 
 export class Code extends React.Component {
 	
@@ -1014,81 +1087,491 @@ export class Stack extends React.Component {
 		return text;
 	};
 
+	B0()
+	{
+		let box = [];
+		if (this.props.var1 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Red}> 
+					{ this.b0() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b0() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B1()
+	{
+		let box = [];
+		if (this.props.var1 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Red}> 
+					{ this.b1() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b1() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B2()
+	{
+		let box = [];
+		if (this.props.var1 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Red}> 
+					{ this.b2() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b2() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B3()
+	{
+		let box = [];
+		if (this.props.var1 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Red}> 
+					{ this.b3() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b3() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B4()
+	{
+		let box = [];
+		if (this.props.var1 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Red}> 
+					{ this.b4() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b4() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B5()
+	{
+		let box = [];
+		if (this.props.var1 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Red}> 
+					{ this.b5() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b5() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B6()
+	{
+		let box = [];
+		if (this.props.var1 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Red}> 
+					{ this.b6() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b6() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B7()
+	{
+		let box = [];
+		if (this.props.var1 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Red}> 
+					{ this.b7() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b7() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B8()
+	{
+		let box = [];
+		if (this.props.var1 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Red}> 
+					{ this.b8() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b8() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B9()
+	{
+		let box = [];
+		if (this.props.var1 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Red}> 
+					{ this.b9() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b9() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B10()
+	{
+		let box = [];
+		if (this.props.var1 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Red}> 
+					{ this.b10() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b10() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B11()
+	{
+		let box = [];
+		if (this.props.var1 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Red}> 
+					{ this.b11() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b11() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B12()
+	{
+		let box = [];
+		if (this.props.var1 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Red}> 
+					{ this.b12() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b12() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B13()
+	{
+		let box = [];
+		if (this.props.var2 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Purple}> 
+					{ this.b13() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b13() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B14()
+	{
+		let box = [];
+		if (this.props.var2 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Purple}> 
+					{ this.b14() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b14() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B15()
+	{
+		let box = [];
+		if (this.props.var2 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Purple}> 
+					{ this.b15() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b15() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B16()
+	{
+		let box = [];
+		if (this.props.var2 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Purple}> 
+					{ this.b16() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b16() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B17()
+	{
+		let box = [];
+		if (this.props.var2 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Purple}> 
+					{ this.b17() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b17() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B18()
+	{
+		let box = [];
+		if (this.props.var2 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Purple}> 
+					{ this.b18() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b18() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B19()
+	{
+		let box = [];
+		if (this.props.var2 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Purple}> 
+					{ this.b19() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b19() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B20()
+	{
+		let box = [];
+		if (this.props.var3 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Blue}> 
+					{ this.b20() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b20() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B21()
+	{
+		let box = [];
+		if (this.props.var3 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Blue}> 
+					{ this.b21() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b21() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B22()
+	{
+		let box = [];
+		if (this.props.var3 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Blue}> 
+					{ this.b22() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b22() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B23()
+	{
+		let box = [];
+		if (this.props.var3 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Blue}> 
+					{ this.b23() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b23() } 
+				</View>
+			)
+		}
+		return box;
+	};
+	
+
 render() {
     return (
     	<View style={styles.panel3}>
-			<View style = {styles.greetingBox2}> 
-				{ this.b0() } 
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b1() } 
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b2() } 
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b3() } 
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b4() } 
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b5() } 
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b6() } 
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b7() } 
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b8() } 
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b9() } 
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b10() } 
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b11() } 
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b12() } 
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b13() } 
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b14() } 
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b15() } 
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b16() } 
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b17() } 
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b18() } 
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b19() } 
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b20() } 
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b21() } 
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b22() } 
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b23() }  
-			</View>
+			{ this.B0() }
+			{ this.B1() }
+			{ this.B2() }
+			{ this.B3() }
+			{ this.B4() }
+			{ this.B5() }
+			{ this.B6() }
+			{ this.B7() }
+			{ this.B8() }
+			{ this.B9() }
+			{ this.B10() }
+			{ this.B11() }
+			{ this.B12() }
+			{ this.B13() }
+			{ this.B14() }
+			{ this.B15() }
+			{ this.B16() }
+			{ this.B17() }
+			{ this.B18() }
+			{ this.B19() }
+			{ this.B20() }
+			{ this.B21() }
+			{ this.B22() }
+			{ this.B23() }
+			
 			<View style = {styles.greetingBox2}> 
 				{ this.b24() }  
 			</View>
@@ -1125,6 +1608,7 @@ const ConnectedCode = connect(Code);
 const ConnectedComment = connect(Comment);
 const ConnectedControl = connect(Control);
 const ConnectedStack = connect(Stack);
+const ConnectedVar = connect(Var);
 
 
 const styles = StyleSheet.create({
@@ -1138,8 +1622,10 @@ const styles = StyleSheet.create({
   },
   panel2: {
     // Fill the entire surface
-    width: 100,
-    height: 100,
+    width: 200,
+    height: 50,
+    display: 'flex',
+    flexDirection: 'row-reverse',
     backgroundColor: 'rgba(255, 255, 255, 0.4)',
     justifyContent: 'center',
     alignItems: 'center',
@@ -1178,6 +1664,36 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#639dda',
   },
+  buttonBox1: {
+    padding: 4,
+    backgroundColor: '#ef010b',
+  },
+  greetingBox2Red: {
+    padding: 2,
+    backgroundColor: '#ef010b',
+    borderWidth: 1,
+    borderColor: '#639dda',
+  },
+  buttonBox2: {
+    padding: 4,
+    backgroundColor: '#a176ac',
+  },
+  greetingBox2Purple: {
+    padding: 2,
+    backgroundColor: '#a176ac',
+    borderWidth: 1,
+    borderColor: '#639dda',
+  },
+  buttonBox3: {
+    padding: 4,
+    backgroundColor: '#4ebdad',
+  },
+  greetingBox2Blue: {
+    padding: 2,
+    backgroundColor: '#4ebdad',
+    borderWidth: 1,
+    borderColor: '#639dda',
+  },
   forLoop: {
     padding: 2,
     backgroundColor: '#000000',
@@ -1196,10 +1712,14 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: 'green'
   },
-  
+  black: {
+  	fontSize: 30,
+  	color: 'black'
+  },
  });
 
 AppRegistry.registerComponent('ConnectedComment', () => ConnectedComment);
 AppRegistry.registerComponent('ConnectedCode', () => ConnectedCode);
 AppRegistry.registerComponent('ConnectedControl', () => ConnectedControl);
 AppRegistry.registerComponent('ConnectedStack', () => ConnectedStack);
+AppRegistry.registerComponent('ConnectedVar', () => ConnectedVar);
