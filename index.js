@@ -21,10 +21,27 @@ const comments = [
 "An integer is 4 bytes. That is why\ni gets 4 boxes.",
 "j is declared in the for loop. It is\nstill stored in the stack, but\nits scope is only in this for loop.",
 "The length of newDay is 6 because it\nis the number of characters\nbefore the end-of-string character.\nThe for loop continues because 0 < 6.",
-"Letter at newDay[0] replaces letter\nat appt[0]",
-"post-incrementation on i",
+"Character at newDay[0] replaces character\nat appt[0].",
+"Post-incrementation on i",
 "j is incremnted by for loop",
-
+"The loop condition is rechecked. 1 < 6 so the loop continues",
+"Second pass through the loop. Char at newDay[1] replaces char at appt[1]. Then i is incremented. Then j is incremented. Then loop condition is checked again and passes.",
+"Third pass through the loop. Char at newDay[2] replaces char at appt[2]. Then i is incremented. Then j is incremented. Then loop condition is checked again and passes.",
+"Fourth pass through the loop. Char at newDay[3] replaces char at appt[3]. Then i is incremented. Then j is incremented. Then loop condition is checked again and passes.",
+"Fifth pass through the loop. Char at newDay[4] replaces char at appt[4]. Then i is incremented. Then j is incremented. Then loop condition is checked again and passes.",
+"Sixth pass through the loop. Char at newDay[5] replaces char at appt[5]. Then i is incremented. Then j is incremented. Then loop condition is checked again and fails because 6 is not less than 6.",
+"The for loop is exited. The scope of j was only in the for loop, and now that it will not be used anymore its data is freed from the stack.",
+"The next for loop is started and k is declared and intialized to 0 on the stack. Note that the scope of k is just this for loop.",
+"The length of newTime is 3. 0 < 3 so the for loop can begin executing the code within.",
+"Character at newTime[0] replaces character\nat appt[6].",
+"Post-incrementation on i",
+"k is incremented by the for loop",
+"The loop condition is rechecked. 1 < 6 so the loop continues",
+"Second pass through the loop. Char at newTime[1] replaces char at appt[7]. Then i is incremented. Then k is incremented. Then loop condition is checked again and passes.",
+"Third pass through the loop. Char at newTime[2]] replaces char at appt[8]. Then i is incremented. Then k is incremented. Then loop condition is checked again and fails because 3 is not less than 3.",
+"This foor loop is exited, so k's memory is freed from the stack.",
+"The data for the memory cells in appt up to the end-of-string character is copied to be printed.",
+"The print statement outputs the string. Notice this is not the intended output of the program. Hopefully, after this walkthrough you are able to pick up on where the programmer went wrong in writing this code snippet.",
 ];
 
 const data = [
@@ -38,7 +55,24 @@ const data = [
 "/mp-yadsendeM/yadnoM/mp800000000--------",
 "/mp-yadsendeM/yadnoM/mp810000000--------",
 "/mp-yadsendeM/yadnoM/mp810001000--------",
-
+"/mp-yadsendeM/yadnoM/mp810001000--------",
+"/mp-yadsendoM/yadnoM/mp820002000--------",
+"/mp-yadsennoM/yadnoM/mp830003000--------",
+"/mp-yadsednoM/yadnoM/mp840004000--------",
+"/mp-yadsadnoM/yadnoM/mp850005000--------",
+"/mp-yadyadnoM/yadnoM/mp860006000--------",
+"/mp-yadyadnoM/yadnoM/mp86000------------",
+"/mp-yadyadnoM/yadnoM/mp860000000--------",
+"/mp-yadyadnoM/yadnoM/mp860000000--------",
+"/mp-ya8yadnoM/yadnoM/mp860000000--------",
+"/mp-ya8yadnoM/yadnoM/mp870000000--------",
+"/mp-ya8yadnoM/yadnoM/mp870001000--------",
+"/mp-ya8yadnoM/yadnoM/mp870001000--------",
+"/mp-yp8yadnoM/yadnoM/mp880002000--------",
+"/mp-mp8yadnoM/yadnoM/mp890003000--------",
+"/mp-mp8yadnoM/yadnoM/mp89000------------",
+"/mp-mp8yadnoM/yadnoM/mp89000------------",
+"/mp-mp8yadnoM/yadnoM/mp89000------------",
 ];
 
 export class Var extends React.Component {
@@ -53,6 +87,18 @@ export class Var extends React.Component {
 
 	_newTime= () => {
 		changeState(4);
+	}; 
+
+	_i= () => {
+		changeState(5);
+	}; 
+
+	_j= () => {
+		changeState(6);
+	}; 
+
+	_k= () => {
+		changeState(7);
 	};  
 
 	getButtons()
@@ -96,6 +142,42 @@ export class Var extends React.Component {
 		          style = {styles.buttonBox3}>
 		            <Text style={styles.greeting}>
 		               newTime
+		            </Text>
+		        </VrButton>
+			)
+		}
+
+		if(this.props.counter >= 4) {
+			buttons.push(
+				<VrButton
+		          onClick = {this._i}
+		          style = {styles.buttonBox4}>
+		            <Text style={styles.greeting}>
+		               i
+		            </Text>
+		        </VrButton>
+			)
+		}
+
+		if((this.props.counter >= 5) && (this.props.counter <= 15)) {
+			buttons.push(
+				<VrButton
+		          onClick = {this._j}
+		          style = {styles.buttonBox5}>
+		            <Text style={styles.greeting}>
+		               j
+		            </Text>
+		        </VrButton>
+			)
+		}
+
+		if((this.props.counter >= 17) && (this.props.counter <= 24)) {
+			buttons.push(
+				<VrButton
+		          onClick = {this._k}
+		          style = {styles.buttonBox6}>
+		            <Text style={styles.greeting}>
+		               k
 		            </Text>
 		        </VrButton>
 			)
@@ -209,8 +291,18 @@ export class Code extends React.Component {
   				</Text> 
 			)
 			m.push(
+				<Text style={styles.black}> 
+  					{'-'} 
+  				</Text> 
+			)
+			m.push(
 				<Text style={styles.greeting}> 
   					{'j < strlen(newDay);'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.black}> 
+  					{'-'} 
   				</Text> 
 			)
 			m.push(
@@ -224,7 +316,7 @@ export class Code extends React.Component {
   				</Text> 
 			)
 
-		} else if(this.props.counter == 6) {
+		} else if((this.props.counter == 6) || (this.props.counter == 10)) {
 			m.push(
 				<Text style={styles.greeting}> 
   					{'for ('} 
@@ -236,8 +328,18 @@ export class Code extends React.Component {
   				</Text> 
 			)
 			m.push(
+				<Text style={styles.black}> 
+  					{'-'} 
+  				</Text> 
+			)
+			m.push(
 				<Text style={styles.colored}> 
   					{'j < strlen(newDay);'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.black}> 
+  					{'-'} 
   				</Text> 
 			)
 			m.push(
@@ -262,8 +364,18 @@ export class Code extends React.Component {
   				</Text> 
 			)
 			m.push(
+				<Text style={styles.black}> 
+  					{'-'} 
+  				</Text> 
+			)
+			m.push(
 				<Text style={styles.greeting}> 
   					{'j < strlen(newDay);'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.black}> 
+  					{'-'} 
   				</Text> 
 			)
 			m.push(
@@ -273,6 +385,42 @@ export class Code extends React.Component {
 			)
 			m.push(
 				<Text style={styles.greeting}> 
+  					{')'} 
+  				</Text> 
+			)
+		} else if((this.props.counter >= 11) && (this.props.counter <= 15)) {
+			m.push(
+				<Text style={styles.colored}> 
+  					{'for ('} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'int j = 0; '} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.black}> 
+  					{'-'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'j < strlen(newDay);'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.black}> 
+  					{'-'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'j++'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
   					{')'} 
   				</Text> 
 			)
@@ -288,8 +436,18 @@ export class Code extends React.Component {
   				</Text> 
 			)
 			m.push(
+				<Text style={styles.black}> 
+  					{'-'} 
+  				</Text> 
+			)
+			m.push(
 				<Text style={styles.greeting}> 
   					{'j < strlen(newDay);'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.black}> 
+  					{'-'} 
   				</Text> 
 			)
 			m.push(
@@ -313,6 +471,11 @@ export class Code extends React.Component {
 		if(this.props.counter == 7)
 		{
 			m.push(
+				<Text style={styles.black}> 
+  					{'---'} 
+  				</Text> 
+			)
+			m.push(
 				<Text style={styles.colored}> 
   					{'appt\['} 
   				</Text> 
@@ -335,6 +498,11 @@ export class Code extends React.Component {
 
 		} else if(this.props.counter == 8) {
 			m.push(
+				<Text style={styles.black}> 
+  					{'---'} 
+  				</Text> 
+			)
+			m.push(
 				<Text style={styles.greeting}> 
   					{'appt\['} 
   				</Text> 
@@ -354,7 +522,39 @@ export class Code extends React.Component {
   					{'\] = newDay[j];'} 
   				</Text> 
 			)
-		} else {
+		} else if((this.props.counter >= 11) && (this.props.counter <= 15)) {
+			m.push(
+				<Text style={styles.black}> 
+  					{'---'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'appt\['} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'i'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'++'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'\] = newDay[j];'} 
+  				</Text> 
+			)
+		}
+		else {
+			m.push(
+				<Text style={styles.black}> 
+  					{'---'} 
+  				</Text> 
+			)
 			m.push(
 				<Text style={styles.greeting}> 
   					{'appt\['} 
@@ -380,6 +580,312 @@ export class Code extends React.Component {
 		return m;
 	};	
 
+	colorState7()
+	{
+		let m = [];
+		if(this.props.counter == 17)
+		{
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'for ('} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'int k = 0;'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.black}> 
+  					{'-'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'k < strlen(newTime);'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.black}> 
+  					{'-'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'k++'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{')'} 
+  				</Text> 
+			)
+
+		} else if((this.props.counter == 18) || (this.props.counter == 22)) {
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'for ('} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'int k = 0;'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.black}> 
+  					{'-'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'k < strlen(newTime);'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.black}> 
+  					{'-'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'k++'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{')'} 
+  				</Text> 
+			)
+		} else if(this.props.counter == 21) {
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'for ('} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'int k = 0; '} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.black}> 
+  					{'-'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'k < strlen(newTime);'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.black}> 
+  					{'-'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'k++'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{')'} 
+  				</Text> 
+			)
+		} else if((this.props.counter >= 23) && (this.props.counter <= 24)) {
+			m.push(
+				<Text style={styles.colored}> 
+  					{'for ('} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'int k = 0; '} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.black}> 
+  					{'-'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'k < strlen(newTime);'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.black}> 
+  					{'-'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'k++'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{')'} 
+  				</Text> 
+			)
+		} else {
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'for ('} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'int k = 0;'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.black}> 
+  					{'-'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'k < strlen(newTime);'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.black}> 
+  					{'-'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'k++'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{')'} 
+  				</Text> 
+			)
+		}
+		
+		return m;
+	};
+
+	colorState8()
+	{
+		let m = [];
+		if(this.props.counter == 19)
+		{
+			m.push(
+				<Text style={styles.black}> 
+  					{'---'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'appt\['} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'i'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'++'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'\] = newTime[k];'} 
+  				</Text> 
+			)
+
+		} else if(this.props.counter == 20) {
+			m.push(
+				<Text style={styles.black}> 
+  					{'---'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'appt\['} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'i'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'++'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'\] = newTime[k];'} 
+  				</Text> 
+			)
+		} else if((this.props.counter >= 23) && (this.props.counter <= 24)) {
+			m.push(
+				<Text style={styles.black}> 
+  					{'---'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'appt\['} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'i'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'++'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.colored}> 
+  					{'\] = newTime[k];'} 
+  				</Text> 
+			)
+		}
+		else {
+			m.push(
+				<Text style={styles.black}> 
+  					{'---'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'appt\['} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'i'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'++'} 
+  				</Text> 
+			)
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'\] = newTime[k];'} 
+  				</Text> 
+			)
+		}
+		
+		return m;
+	};	
+
+
 	render() {
 	    return (
 	 		<View style = {styles.panelCode}>
@@ -395,14 +901,13 @@ export class Code extends React.Component {
 				<View style = {styles.forLoop}>
 				  	{ this.colorState6() }
 				</View>
-
+				<View style = {styles.forLoop}>
+				  	{ this.colorState7() }
+				</View>
+				<View style = {styles.forLoop}>
+				  	{ this.colorState8() }
+				</View>
 				<View style = {styles.greetingBox1}>
-					<Text style={styles.greeting}>
-			            {'for (int k = 0; k < strlen(newTime); k++)'}
-			        </Text>
-				  <Text style={styles.greeting}>
-			              {"\t\tappt[i++] = newTime[k];"}
-				  </Text>
 				  <Text style={styles.greeting}>
 			            {'printf("%s\\n", appt);'}
 			       </Text>
@@ -463,16 +968,23 @@ export class Stack extends React.Component {
 	b0()
 	{
 		let text = [];
-		if(this.props.counter == 1) {
+		if(this.props.counter == 0) {
+			text.push(
+				 <Text style = {styles.greeting}> 
+				 	-
+				 </Text> 
+			)
+		}
+		else if(this.props.counter == 1) {
 			text.push(
 				 <Text style = {styles.colored}> 
-				 	{`${data[`${this.props.counter}`][0]}`} 
+				 	\0
 				 </Text> 
 			)
 		} else {
 			text.push(
 				 <Text style = {styles.greeting}> 
-				 	{`${data[`${this.props.counter}`][0]}`} 
+				 	\0 
 				 </Text> 
 			)
 		}
@@ -520,20 +1032,27 @@ export class Stack extends React.Component {
 	b3()
 	{
 		let text = [];
-		if(this.props.counter == 1) {
-			text.push(
-				 <Text style = {styles.colored}> 
-				 	{`${data[`${this.props.counter}`][3]}`} 
-				 </Text> 
-			)
-		} else {
+		if(this.props.counter == 0) {
 			text.push(
 				 <Text style = {styles.greeting}> 
 				 	{`${data[`${this.props.counter}`][3]}`} 
 				 </Text> 
 			)
+		} else if(this.props.var1 == true) {
+			text.push(
+				 <Text style = {styles.red}> 
+				 	{`${data[`${this.props.counter}`][3]}`} 
+				 </Text> 
+			)
+		} else {
+			text.push(
+				 <Text style = {styles.black}> 
+				 	{`${data[`${this.props.counter}`][3]}`} 
+				 </Text> 
+			)
 		}
 		return text;
+		
 	};
 
 	b4()
@@ -596,7 +1115,7 @@ export class Stack extends React.Component {
 	b7()
 	{
 		let text = [];
-		if(this.props.counter == 1) {
+		if((this.props.counter == 1) || (this.props.counter == 15)) {
 			text.push(
 				 <Text style = {styles.colored}> 
 				 	{`${data[`${this.props.counter}`][7]}`} 
@@ -615,7 +1134,7 @@ export class Stack extends React.Component {
 	b8()
 	{
 		let text = [];
-		if(this.props.counter == 1) {
+		if((this.props.counter == 1) || (this.props.counter == 14)) {
 			text.push(
 				 <Text style = {styles.colored}> 
 				 	{`${data[`${this.props.counter}`][8]}`} 
@@ -634,7 +1153,7 @@ export class Stack extends React.Component {
 	b9()
 	{
 		let text = [];
-		if(this.props.counter == 1) {
+		if((this.props.counter == 1) || (this.props.counter == 13) ) {
 			text.push(
 				 <Text style = {styles.colored}> 
 				 	{`${data[`${this.props.counter}`][9]}`} 
@@ -653,7 +1172,7 @@ export class Stack extends React.Component {
 	b10()
 	{
 		let text = [];
-		if(this.props.counter == 1) {
+		if((this.props.counter == 1) || (this.props.counter == 12) ) {
 			text.push(
 				 <Text style = {styles.colored}> 
 				 	{`${data[`${this.props.counter}`][10]}`} 
@@ -672,7 +1191,7 @@ export class Stack extends React.Component {
 	b11()
 	{
 		let text = [];
-		if(this.props.counter == 1) {
+		if((this.props.counter == 1) || (this.props.counter == 11) ) {
 			text.push(
 				 <Text style = {styles.colored}> 
 				 	{`${data[`${this.props.counter}`][11]}`} 
@@ -710,16 +1229,23 @@ export class Stack extends React.Component {
 	b13()
 	{
 		let text = [];
-		if(this.props.counter == 2) {
+		if(this.props.counter < 2) {
+			text.push(
+				 <Text style = {styles.greeting}> 
+				 	-
+				 </Text> 
+			)
+		}
+		else if(this.props.counter == 2) {
 			text.push(
 				 <Text style = {styles.colored}> 
-				 	{`${data[`${this.props.counter}`][13]}`} 
+				 	\0
 				 </Text> 
 			)
 		} else {
 			text.push(
 				 <Text style = {styles.greeting}> 
-				 	{`${data[`${this.props.counter}`][13]}`} 
+				 	\0 
 				 </Text> 
 			)
 		}
@@ -849,16 +1375,23 @@ export class Stack extends React.Component {
 	b20()
 	{
 		let text = [];
-		if(this.props.counter == 3) {
+		if(this.props.counter < 3) {
+			text.push(
+				 <Text style = {styles.greeting}> 
+				 	-
+				 </Text> 
+			)
+		}
+		else if(this.props.counter == 3) {
 			text.push(
 				 <Text style = {styles.colored}> 
-				 	{`${data[`${this.props.counter}`][20]}`} 
+				 	\0
 				 </Text> 
 			)
 		} else {
 			text.push(
 				 <Text style = {styles.greeting}> 
-				 	{`${data[`${this.props.counter}`][20]}`} 
+				 	\0 
 				 </Text> 
 			)
 		}
@@ -1542,6 +2075,182 @@ export class Stack extends React.Component {
 		}
 		return box;
 	};
+
+	B24()
+	{
+		let box = [];
+		if (this.props.var4 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Orange}> 
+					{ this.b24() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b24() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B25()
+	{
+		let box = [];
+		if (this.props.var4 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Orange}> 
+					{ this.b25() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b25() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B26()
+	{
+		let box = [];
+		if (this.props.var4 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Orange}> 
+					{ this.b26() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b26() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B27()
+	{
+		let box = [];
+		if (this.props.var4 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Orange}> 
+					{ this.b27() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b27() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B28()
+	{
+		let box = [];
+		if (this.props.var5 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Royal}> 
+					{ this.b28() } 
+				</View>
+			)
+		} else if (this.props.var6 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Violet}> 
+					{ this.b28() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b28() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B29()
+	{
+		let box = [];
+		if (this.props.var5 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Royal}> 
+					{ this.b29() } 
+				</View>
+			)
+		} else if (this.props.var6 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Violet}> 
+					{ this.b29() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b29() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B30()
+	{
+		let box = [];
+		if (this.props.var5 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Royal}> 
+					{ this.b30() } 
+				</View>
+			)
+		} else if (this.props.var6 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Violet}> 
+					{ this.b30() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b30() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
+	B31()
+	{
+		let box = [];
+		if (this.props.var5 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Royal}> 
+					{ this.b31() } 
+				</View>
+			)
+		} else if (this.props.var6 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Violet}> 
+					{ this.b31() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b31() } 
+				</View>
+			)
+		}
+		return box;
+	};
 	
 
 render() {
@@ -1571,31 +2280,15 @@ render() {
 			{ this.B21() }
 			{ this.B22() }
 			{ this.B23() }
-			
-			<View style = {styles.greetingBox2}> 
-				{ this.b24() }  
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b25() }  
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b26() }  
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b27() }  
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b28() }  
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b29() }  
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b30() }  
-			</View>
-			<View style = {styles.greetingBox2}> 
-				{ this.b31() }  
-			</View>
+			{ this.B24() }
+			{ this.B25() }
+			{ this.B26() }
+			{ this.B27() }
+			{ this.B28() }
+			{ this.B29() }
+			{ this.B30() }
+			{ this.B31() }
+
 			<View style = {styles.greetingBox2}> 
 				{ this.b32() }  
 			</View>
@@ -1694,6 +2387,36 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#639dda',
   },
+  buttonBox4: {
+    padding: 4,
+    backgroundColor: '#ff6600',
+  },
+  greetingBox2Orange: {
+    padding: 2,
+    backgroundColor: '#ff6600',
+    borderWidth: 1,
+    borderColor: '#639dda',
+  },
+  buttonBox5: {
+    padding: 4,
+    backgroundColor: '#0000cc',
+  },
+  greetingBox2Royal: {
+    padding: 2,
+    backgroundColor: '#0000cc',
+    borderWidth: 1,
+    borderColor: '#639dda',
+  },
+  buttonBox6: {
+    padding: 4,
+    backgroundColor: '#660099',
+  },
+  greetingBox2Violet: {
+    padding: 2,
+    backgroundColor: '#660099',
+    borderWidth: 1,
+    borderColor: '#639dda',
+  },
   forLoop: {
     padding: 2,
     backgroundColor: '#000000',
@@ -1715,6 +2438,10 @@ const styles = StyleSheet.create({
   black: {
   	fontSize: 30,
   	color: 'black'
+  },
+  red: {
+  	fontSize: 30,
+  	color: '#ef010b'
   },
  });
 
