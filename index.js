@@ -15,64 +15,64 @@ import { connect, changeState} from './store'
 
 const comments = [
 "Initial state.", 
-"Stack grows backwards, so appt is\nput at the end of the stack.",
+"Stack grows backwards, so appt is put\n at the end of the stack. Try\nclicking on the red appt button to see\nwhat happens.",
 "Each character is 1 byte in a c-string.",
 "newTime added to stack",
-"An integer is 4 bytes. That is why\ni gets 4 boxes.",
-"j is declared in the for loop. It is\nstill stored in the stack, but\nits scope is only in this for loop.",
-"The length of newDay is 6 because it\nis the number of characters\nbefore the end-of-string character.\nThe for loop continues because 0 < 6.",
+"An integer is 4 bytes. That is why i\ngets 4 boxes.",
+"j is declared in the for loop. It is\nstill stored in the stack, but its\nscope is only in this for loop.",
+"The length of newDay is 6 because it is\nthe number of characters before\nthe end-of-string character.The for\nloop continues because 0 < 6.",
 "Character at newDay[0] replaces character\nat appt[0].",
 "Post-incrementation on i",
 "j is incremnted by for loop",
-"The loop condition is rechecked. 1 < 6 so the loop continues",
-"Second pass through the loop. Char at newDay[1] replaces char at appt[1]. Then i is incremented. Then j is incremented. Then loop condition is checked again and passes.",
-"Third pass through the loop. Char at newDay[2] replaces char at appt[2]. Then i is incremented. Then j is incremented. Then loop condition is checked again and passes.",
-"Fourth pass through the loop. Char at newDay[3] replaces char at appt[3]. Then i is incremented. Then j is incremented. Then loop condition is checked again and passes.",
-"Fifth pass through the loop. Char at newDay[4] replaces char at appt[4]. Then i is incremented. Then j is incremented. Then loop condition is checked again and passes.",
-"Sixth pass through the loop. Char at newDay[5] replaces char at appt[5]. Then i is incremented. Then j is incremented. Then loop condition is checked again and fails because 6 is not less than 6.",
-"The for loop is exited. The scope of j was only in the for loop, and now that it will not be used anymore its data is freed from the stack.",
-"The next for loop is started and k is declared and intialized to 0 on the stack. Note that the scope of k is just this for loop.",
-"The length of newTime is 3. 0 < 3 so the for loop can begin executing the code within.",
+"The loop condition is rechecked. 1 < 6\nso the loop continues",
+"Second pass through the loop. Char at\nnewDay[1] replaces char at appt[1].\nThen i is incremented. Then j is\nincremented. Then loop condition is \nchecked again and passes.",
+"Third pass through the loop. Char at\nnewDay[2] replaces char at appt[2]. \nThen i is incremented. Then j is\nincremented. Then loop condition is \nchecked again and passes.",
+"Fourth pass through the loop. Char at\nnewDay[3] replaces char at appt[3].\nThen i is incremented. Then j is\nincremented. Then loop condition is \nchecked again and passes.",
+"Fifth pass through the loop. Char at\nnewDay[4] replaces char at appt[4].\nThen i is incremented. Then j is\nincremented. Then loop condition is \nchecked again and passes.",
+"Sixth pass through the loop. Char at\nnewDay[5] replaces char at appt[5].\nThen i is incremented. Then j is\nincremented. Then loop condition is \nchecked again and fails because\nis not less than 6.",
+"The for loop is exited. The scope of j was\nonly in the for loop, and now\nthat it will not be used anymore\nits data is freed from the stack.",
+"The next for loop is started and k is\ndeclared and intialized to 0 on the\nstack. Note that the scope of k\nis just this for loop.",
+"The length of newTime is 3. 0 < 3 so the\nfor loop can begin executing the\ncode within.",
 "Character at newTime[0] replaces character\nat appt[6].",
 "Post-incrementation on i",
 "k is incremented by the for loop",
-"The loop condition is rechecked. 1 < 6 so the loop continues",
-"Second pass through the loop. Char at newTime[1] replaces char at appt[7]. Then i is incremented. Then k is incremented. Then loop condition is checked again and passes.",
-"Third pass through the loop. Char at newTime[2]] replaces char at appt[8]. Then i is incremented. Then k is incremented. Then loop condition is checked again and fails because 3 is not less than 3.",
-"This foor loop is exited, so k's memory is freed from the stack.",
-"The data for the memory cells in appt up to the end-of-string character is copied to be printed.",
-"The print statement outputs the string. Notice this is not the intended output of the program. Hopefully, after this walkthrough you are able to pick up on where the programmer went wrong in writing this code snippet.",
+"The loop condition is rechecked. 1 < 6 so\nthe loop continues",
+"Second pass through the loop. Char at\nnewTime[1] replaces char at appt[7].\nThen i is incremented. Then k\nis incremented. Then loop condition is\nchecked again and passes.",
+"Third pass through the loop. Char at\nnewTime[2]] replaces char at appt[8].\nThen i is incremented. Then k\nis incremented. Then loop condition is\nchecked again and fails because\n3 is not less than 3.",
+"This foor loop is exited, so k's memory is\nfreed from the stack.",
+"The data for the memory cells in appt up to\nthe end-of-string character is\ncopied to be printed.",
+"The print statement outputs the string.\nLook behind you to see the output.\nNotice this is not the intended\noutput of the program. Hopefully,\nafter this walkthrough you are able\nto pick up on where the programmer\nwent wrong in writing this code snippet.",
 ];
 
 const data = [
 "----------------------------------------",
-"/mp-yadsendeW---------------------------",
-"/mp-yadsendeW/yadnoM--------------------",
-"/mp-yadsendeW/yadnoM/mp8----------------",
-"/mp-yadsendeW/yadnoM/mp80000------------",
-"/mp-yadsendeW/yadnoM/mp800000000--------",
-"/mp-yadsendeW/yadnoM/mp800000000--------",
-"/mp-yadsendeM/yadnoM/mp800000000--------",
-"/mp-yadsendeM/yadnoM/mp810000000--------",
-"/mp-yadsendeM/yadnoM/mp810001000--------",
-"/mp-yadsendeM/yadnoM/mp810001000--------",
-"/mp-yadsendoM/yadnoM/mp820002000--------",
-"/mp-yadsennoM/yadnoM/mp830003000--------",
-"/mp-yadsednoM/yadnoM/mp840004000--------",
-"/mp-yadsadnoM/yadnoM/mp850005000--------",
-"/mp-yadyadnoM/yadnoM/mp860006000--------",
-"/mp-yadyadnoM/yadnoM/mp86000------------",
-"/mp-yadyadnoM/yadnoM/mp860000000--------",
-"/mp-yadyadnoM/yadnoM/mp860000000--------",
-"/mp-ya8yadnoM/yadnoM/mp860000000--------",
-"/mp-ya8yadnoM/yadnoM/mp870000000--------",
-"/mp-ya8yadnoM/yadnoM/mp870001000--------",
-"/mp-ya8yadnoM/yadnoM/mp870001000--------",
-"/mp-yp8yadnoM/yadnoM/mp880002000--------",
-"/mp-mp8yadnoM/yadnoM/mp890003000--------",
-"/mp-mp8yadnoM/yadnoM/mp89000------------",
-"/mp-mp8yadnoM/yadnoM/mp89000------------",
-"/mp-mp8yadnoM/yadnoM/mp89000------------",
+"/mp4-yadsendeW---------------------------",
+"/mp4-yadsendeW/yadnoM--------------------",
+"/mp4-yadsendeW/yadnoM/mp8----------------",
+"/mp4-yadsendeW/yadnoM/mp80000------------",
+"/mp4-yadsendeW/yadnoM/mp800000000--------",
+"/mp4-yadsendeW/yadnoM/mp800000000--------",
+"/mp4-yadsendeM/yadnoM/mp800000000--------",
+"/mp4-yadsendeM/yadnoM/mp810000000--------",
+"/mp4-yadsendeM/yadnoM/mp810001000--------",
+"/mp4-yadsendeM/yadnoM/mp810001000--------",
+"/mp4-yadsendoM/yadnoM/mp820002000--------",
+"/mp4-yadsennoM/yadnoM/mp830003000--------",
+"/mp4-yadsednoM/yadnoM/mp840004000--------",
+"/mp4-yadsadnoM/yadnoM/mp850005000--------",
+"/mp4-yadyadnoM/yadnoM/mp860006000--------",
+"/mp4-yadyadnoM/yadnoM/mp86000------------",
+"/mp4-yadyadnoM/yadnoM/mp860000000--------",
+"/mp4-yadyadnoM/yadnoM/mp860000000--------",
+"/mp4-ya8yadnoM/yadnoM/mp860000000--------",
+"/mp4-ya8yadnoM/yadnoM/mp870000000--------",
+"/mp4-ya8yadnoM/yadnoM/mp870001000--------",
+"/mp4-ya8yadnoM/yadnoM/mp870001000--------",
+"/mp4-yp8yadnoM/yadnoM/mp880002000--------",
+"/mp4-mp8yadnoM/yadnoM/mp890003000--------",
+"/mp4-mp8yadnoM/yadnoM/mp89000------------",
+"/mp4-mp8yadnoM/yadnoM/mp89000------------",
+"/mp4-mp8yadnoM/yadnoM/mp89000------------",
 ];
 
 export class Var extends React.Component {
@@ -188,7 +188,7 @@ export class Var extends React.Component {
 
 	render() {
 	    return (
-	    	<View style = {styles.panel1}>
+	    	<View style = {styles.panelVars}>
 		        { this.getButtons() }
 			</View>
 	    );
@@ -885,6 +885,26 @@ export class Code extends React.Component {
 		return m;
 	};	
 
+	colorState9()
+	{
+		let m = [];
+		if((this.props.counter == 26) || (this.props.counter == 27)) 
+		{
+			m.push(
+				<Text style={styles.colored}> 
+  					{'printf(\"%s\\n", appt);'} 
+  				</Text> 
+  			)
+		} else {
+			m.push(
+				<Text style={styles.greeting}> 
+  					{'printf(\"%s\\n", appt);'} 
+  				</Text> 
+  			)
+		} 
+
+		return m;
+	}
 
 	render() {
 	    return (
@@ -907,11 +927,9 @@ export class Code extends React.Component {
 				<View style = {styles.forLoop}>
 				  	{ this.colorState8() }
 				</View>
-				<View style = {styles.greetingBox1}>
-				  <Text style={styles.greeting}>
-			            {'printf("%s\\n", appt);'}
-			       </Text>
-		     	</View>
+				<View style = {styles.forLoop}>
+				  	{ this.colorState9() }
+				</View>
 		    </View>   
 	    );
 	}
@@ -1000,6 +1018,12 @@ export class Stack extends React.Component {
 				 	{`${data[`${this.props.counter}`][1]}`} 
 				 </Text> 
 			)
+		} else if((this.props.counter == 26) || (this.props.counter == 27)) {
+			text.push(
+				 <Text style = {styles.green}> 
+				 	{`${data[`${this.props.counter}`][1]}`} 
+				 </Text> 
+			)
 		} else {
 			text.push(
 				 <Text style = {styles.greeting}> 
@@ -1019,6 +1043,12 @@ export class Stack extends React.Component {
 				 	{`${data[`${this.props.counter}`][2]}`} 
 				 </Text> 
 			)
+		} else if((this.props.counter == 26) || (this.props.counter == 27)) {
+			text.push(
+				 <Text style = {styles.green}> 
+				 	{`${data[`${this.props.counter}`][2]}`} 
+				 </Text> 
+			)
 		} else {
 			text.push(
 				 <Text style = {styles.greeting}> 
@@ -1032,22 +1062,47 @@ export class Stack extends React.Component {
 	b3()
 	{
 		let text = [];
-		if(this.props.counter == 0) {
+		if(this.props.counter == 1) {
 			text.push(
-				 <Text style = {styles.greeting}> 
+				 <Text style = {styles.colored}> 
 				 	{`${data[`${this.props.counter}`][3]}`} 
 				 </Text> 
 			)
-		} else if(this.props.var1 == true) {
+		} else if((this.props.counter == 26) || (this.props.counter == 27)) {
 			text.push(
-				 <Text style = {styles.red}> 
+				 <Text style = {styles.green}> 
 				 	{`${data[`${this.props.counter}`][3]}`} 
 				 </Text> 
 			)
 		} else {
 			text.push(
-				 <Text style = {styles.black}> 
+				 <Text style = {styles.greeting}> 
 				 	{`${data[`${this.props.counter}`][3]}`} 
+				 </Text> 
+			)
+		}
+		return text;
+	};
+
+	b4()
+	{
+		let text = [];
+		if(this.props.counter == 0) {
+			text.push(
+				 <Text style = {styles.greeting}> 
+				 	{`${data[`${this.props.counter}`][4]}`} 
+				 </Text> 
+			)
+		} else if(this.props.var1 == true) {
+			text.push(
+				 <Text style = {styles.red}> 
+				 	{`${data[`${this.props.counter}`][4]}`} 
+				 </Text> 
+			)
+		} else {
+			text.push(
+				 <Text style = {styles.black}> 
+				 	{`${data[`${this.props.counter}`][4]}`} 
 				 </Text> 
 			)
 		}
@@ -1055,31 +1110,18 @@ export class Stack extends React.Component {
 		
 	};
 
-	b4()
-	{
-		let text = [];
-		if(this.props.counter == 1) {
-			text.push(
-				 <Text style = {styles.colored}> 
-				 	{`${data[`${this.props.counter}`][4]}`} 
-				 </Text> 
-			)
-		} else {
-			text.push(
-				 <Text style = {styles.greeting}> 
-				 	{`${data[`${this.props.counter}`][4]}`} 
-				 </Text> 
-			)
-		}
-		return text;
-	};
-
 	b5()
 	{
 		let text = [];
-		if(this.props.counter == 1) {
+		if((this.props.counter == 1) || (this.props.counter == 24)) {
 			text.push(
 				 <Text style = {styles.colored}> 
+				 	{`${data[`${this.props.counter}`][5]}`} 
+				 </Text> 
+			)
+		} else if((this.props.counter == 26) || (this.props.counter == 27)) {
+			text.push(
+				 <Text style = {styles.green}> 
 				 	{`${data[`${this.props.counter}`][5]}`} 
 				 </Text> 
 			)
@@ -1096,13 +1138,19 @@ export class Stack extends React.Component {
 	b6()
 	{
 		let text = [];
-		if(this.props.counter == 1) {
+		if((this.props.counter == 1) || (this.props.counter == 23)) {
 			text.push(
 				 <Text style = {styles.colored}> 
 				 	{`${data[`${this.props.counter}`][6]}`} 
 				 </Text> 
 			)
-		} else {
+		} else if((this.props.counter == 26) || (this.props.counter == 27)) {
+			text.push(
+				 <Text style = {styles.green}> 
+				 	{`${data[`${this.props.counter}`][6]}`} 
+				 </Text> 
+			)
+		}  else {
 			text.push(
 				 <Text style = {styles.greeting}> 
 				 	{`${data[`${this.props.counter}`][6]}`} 
@@ -1115,13 +1163,19 @@ export class Stack extends React.Component {
 	b7()
 	{
 		let text = [];
-		if((this.props.counter == 1) || (this.props.counter == 15)) {
+		if((this.props.counter == 1) || (this.props.counter == 19)) {
 			text.push(
 				 <Text style = {styles.colored}> 
 				 	{`${data[`${this.props.counter}`][7]}`} 
 				 </Text> 
 			)
-		} else {
+		} else if((this.props.counter == 26) || (this.props.counter == 27)) {
+			text.push(
+				 <Text style = {styles.green}> 
+				 	{`${data[`${this.props.counter}`][7]}`} 
+				 </Text> 
+			)
+		}  else {
 			text.push(
 				 <Text style = {styles.greeting}> 
 				 	{`${data[`${this.props.counter}`][7]}`} 
@@ -1134,9 +1188,15 @@ export class Stack extends React.Component {
 	b8()
 	{
 		let text = [];
-		if((this.props.counter == 1) || (this.props.counter == 14)) {
+		if((this.props.counter == 1) || (this.props.counter == 15)) {
 			text.push(
 				 <Text style = {styles.colored}> 
+				 	{`${data[`${this.props.counter}`][8]}`} 
+				 </Text> 
+			)
+		} else if((this.props.counter == 26) || (this.props.counter == 27)) {
+			text.push(
+				 <Text style = {styles.green}> 
 				 	{`${data[`${this.props.counter}`][8]}`} 
 				 </Text> 
 			)
@@ -1153,9 +1213,15 @@ export class Stack extends React.Component {
 	b9()
 	{
 		let text = [];
-		if((this.props.counter == 1) || (this.props.counter == 13) ) {
+		if((this.props.counter == 1) || (this.props.counter == 14)) {
 			text.push(
 				 <Text style = {styles.colored}> 
+				 	{`${data[`${this.props.counter}`][9]}`} 
+				 </Text> 
+			)
+		} else if((this.props.counter == 26) || (this.props.counter == 27)) {
+			text.push(
+				 <Text style = {styles.green}> 
 				 	{`${data[`${this.props.counter}`][9]}`} 
 				 </Text> 
 			)
@@ -1172,9 +1238,15 @@ export class Stack extends React.Component {
 	b10()
 	{
 		let text = [];
-		if((this.props.counter == 1) || (this.props.counter == 12) ) {
+		if((this.props.counter == 1) || (this.props.counter == 13) ) {
 			text.push(
 				 <Text style = {styles.colored}> 
+				 	{`${data[`${this.props.counter}`][10]}`} 
+				 </Text> 
+			)
+		} else if((this.props.counter == 26) || (this.props.counter == 27)) {
+			text.push(
+				 <Text style = {styles.green}> 
 				 	{`${data[`${this.props.counter}`][10]}`} 
 				 </Text> 
 			)
@@ -1191,9 +1263,15 @@ export class Stack extends React.Component {
 	b11()
 	{
 		let text = [];
-		if((this.props.counter == 1) || (this.props.counter == 11) ) {
+		if((this.props.counter == 1) || (this.props.counter == 12) ) {
 			text.push(
 				 <Text style = {styles.colored}> 
+				 	{`${data[`${this.props.counter}`][11]}`} 
+				 </Text> 
+			)
+		} else if((this.props.counter == 26) || (this.props.counter == 27)) {
+			text.push(
+				 <Text style = {styles.green}> 
 				 	{`${data[`${this.props.counter}`][11]}`} 
 				 </Text> 
 			)
@@ -1210,9 +1288,15 @@ export class Stack extends React.Component {
 	b12()
 	{
 		let text = [];
-		if((this.props.counter == 1) || (this.props.counter == 7) ) {
+		if((this.props.counter == 1) || (this.props.counter == 11) ) {
 			text.push(
 				 <Text style = {styles.colored}> 
+				 	{`${data[`${this.props.counter}`][12]}`} 
+				 </Text> 
+			)
+		} else if((this.props.counter == 26) || (this.props.counter == 27)) {
+			text.push(
+				 <Text style = {styles.green}> 
 				 	{`${data[`${this.props.counter}`][12]}`} 
 				 </Text> 
 			)
@@ -1227,6 +1311,31 @@ export class Stack extends React.Component {
 	};
 
 	b13()
+	{
+		let text = [];
+		if((this.props.counter == 1) || (this.props.counter == 7) ) {
+			text.push(
+				 <Text style = {styles.colored}> 
+				 	{`${data[`${this.props.counter}`][13]}`} 
+				 </Text> 
+			)
+		} else if((this.props.counter == 26) || (this.props.counter == 27)) {
+			text.push(
+				 <Text style = {styles.green}> 
+				 	{`${data[`${this.props.counter}`][13]}`} 
+				 </Text> 
+			)
+		} else {
+			text.push(
+				 <Text style = {styles.greeting}> 
+				 	{`${data[`${this.props.counter}`][13]}`} 
+				 </Text> 
+			)
+		}
+		return text;
+	};
+
+	b14()
 	{
 		let text = [];
 		if(this.props.counter < 2) {
@@ -1252,31 +1361,18 @@ export class Stack extends React.Component {
 		return text;
 	};
 
-	b14()
-	{
-		let text = [];
-		if(this.props.counter == 2) {
-			text.push(
-				 <Text style = {styles.colored}> 
-				 	{`${data[`${this.props.counter}`][14]}`} 
-				 </Text> 
-			)
-		} else {
-			text.push(
-				 <Text style = {styles.greeting}> 
-				 	{`${data[`${this.props.counter}`][14]}`} 
-				 </Text> 
-			)
-		}
-		return text;
-	};
-
 	b15()
 	{
 		let text = [];
 		if(this.props.counter == 2) {
 			text.push(
 				 <Text style = {styles.colored}> 
+				 	{`${data[`${this.props.counter}`][15]}`} 
+				 </Text> 
+			)
+		} else if(this.props.counter == 15) {
+			text.push(
+				 <Text style = {styles.green}> 
 				 	{`${data[`${this.props.counter}`][15]}`} 
 				 </Text> 
 			)
@@ -1299,6 +1395,12 @@ export class Stack extends React.Component {
 				 	{`${data[`${this.props.counter}`][16]}`} 
 				 </Text> 
 			)
+		} else if(this.props.counter == 14) {
+			text.push(
+				 <Text style = {styles.green}> 
+				 	{`${data[`${this.props.counter}`][16]}`} 
+				 </Text> 
+			)
 		} else {
 			text.push(
 				 <Text style = {styles.greeting}> 
@@ -1315,6 +1417,12 @@ export class Stack extends React.Component {
 		if(this.props.counter == 2) {
 			text.push(
 				 <Text style = {styles.colored}> 
+				 	{`${data[`${this.props.counter}`][17]}`} 
+				 </Text> 
+			)
+		} else if(this.props.counter == 13) {
+			text.push(
+				 <Text style = {styles.green}> 
 				 	{`${data[`${this.props.counter}`][17]}`} 
 				 </Text> 
 			)
@@ -1337,6 +1445,12 @@ export class Stack extends React.Component {
 				 	{`${data[`${this.props.counter}`][18]}`} 
 				 </Text> 
 			)
+		} else if(this.props.counter == 12) {
+			text.push(
+				 <Text style = {styles.green}> 
+				 	{`${data[`${this.props.counter}`][18]}`} 
+				 </Text> 
+			)
 		} else {
 			text.push(
 				 <Text style = {styles.greeting}> 
@@ -1356,7 +1470,7 @@ export class Stack extends React.Component {
 				 	{`${data[`${this.props.counter}`][19]}`} 
 				 </Text> 
 			)
-		} else if(this.props.counter == 7) {
+		} else if(this.props.counter == 11) {
 			text.push(
 				 <Text style = {styles.green}> 
 				 	{`${data[`${this.props.counter}`][19]}`} 
@@ -1373,6 +1487,31 @@ export class Stack extends React.Component {
 	};
 
 	b20()
+	{
+		let text = [];
+		if(this.props.counter == 2) {
+			text.push(
+				 <Text style = {styles.colored}> 
+				 	{`${data[`${this.props.counter}`][20]}`} 
+				 </Text> 
+			)
+		} else if(this.props.counter == 7) {
+			text.push(
+				 <Text style = {styles.green}> 
+				 	{`${data[`${this.props.counter}`][20]}`} 
+				 </Text> 
+			)
+		} else {
+			text.push(
+				 <Text style = {styles.greeting}> 
+				 	{`${data[`${this.props.counter}`][20]}`} 
+				 </Text> 
+			)
+		}
+		return text;
+	};
+
+	b21()
 	{
 		let text = [];
 		if(this.props.counter < 3) {
@@ -1392,25 +1531,6 @@ export class Stack extends React.Component {
 			text.push(
 				 <Text style = {styles.greeting}> 
 				 	\0 
-				 </Text> 
-			)
-		}
-		return text;
-	};
-
-	b21()
-	{
-		let text = [];
-		if(this.props.counter == 3) {
-			text.push(
-				 <Text style = {styles.colored}> 
-				 	{`${data[`${this.props.counter}`][21]}`} 
-				 </Text> 
-			)
-		} else {
-			text.push(
-				 <Text style = {styles.greeting}> 
-				 	{`${data[`${this.props.counter}`][21]}`} 
 				 </Text> 
 			)
 		}
@@ -1458,7 +1578,7 @@ export class Stack extends React.Component {
 	b24()
 	{
 		let text = [];
-		if((this.props.counter == 4) || (this.props.counter == 8)) {
+		if(this.props.counter == 3) {
 			text.push(
 				 <Text style = {styles.colored}> 
 				 	{`${data[`${this.props.counter}`][24]}`} 
@@ -1477,7 +1597,7 @@ export class Stack extends React.Component {
 	b25()
 	{
 		let text = [];
-		if(this.props.counter == 4) {
+		if((this.props.counter == 4) || (this.props.counter == 8) || ((this.props.counter >= 11) && (this.props.counter <= 15)) || (this.props.counter == 20) || ((this.props.counter >= 23) && (this.props.counter <= 24))) {
 			text.push(
 				 <Text style = {styles.colored}> 
 				 	{`${data[`${this.props.counter}`][25]}`} 
@@ -1534,7 +1654,7 @@ export class Stack extends React.Component {
 	b28()
 	{
 		let text = [];
-		if((this.props.counter == 5) || (this.props.counter == 9)) {
+		if(this.props.counter == 4) {
 			text.push(
 				 <Text style = {styles.colored}> 
 				 	{`${data[`${this.props.counter}`][28]}`} 
@@ -1553,7 +1673,7 @@ export class Stack extends React.Component {
 	b29()
 	{
 		let text = [];
-		if(this.props.counter == 5) {
+		if((this.props.counter == 5) || (this.props.counter == 9) || ((this.props.counter >= 11) && (this.props.counter <= 15)) || (this.props.counter == 17) || (this.props.counter == 21) || ((this.props.counter >= 23) && (this.props.counter <= 24))) {
 			text.push(
 				 <Text style = {styles.colored}> 
 				 	{`${data[`${this.props.counter}`][29]}`} 
@@ -1572,7 +1692,7 @@ export class Stack extends React.Component {
 	b30()
 	{
 		let text = [];
-		if(this.props.counter == 5) {
+		if((this.props.counter == 5) || (this.props.counter == 17)) {
 			text.push(
 				 <Text style = {styles.colored}> 
 				 	{`${data[`${this.props.counter}`][30]}`} 
@@ -1591,7 +1711,7 @@ export class Stack extends React.Component {
 	b31()
 	{
 		let text = [];
-		if(this.props.counter == 5) {
+		if((this.props.counter == 5) || (this.props.counter == 17)) {
 			text.push(
 				 <Text style = {styles.colored}> 
 				 	{`${data[`${this.props.counter}`][31]}`} 
@@ -1610,13 +1730,19 @@ export class Stack extends React.Component {
 	b32()
 	{
 		let text = [];
-	
-		text.push(
-			 <Text style = {styles.greeting}> 
-			 	{`${data[`${this.props.counter}`][32]}`} 
-			 </Text> 
-		)
-
+		if((this.props.counter == 5) || (this.props.counter == 17)) {
+			text.push(
+				 <Text style = {styles.colored}> 
+				 	{`${data[`${this.props.counter}`][32]}`} 
+				 </Text> 
+			)
+		} else {
+			text.push(
+				 <Text style = {styles.greeting}> 
+				 	{`${data[`${this.props.counter}`][32]}`} 
+				 </Text> 
+			)
+		}
 		return text;
 	};
 
@@ -1870,9 +1996,9 @@ export class Stack extends React.Component {
 	B13()
 	{
 		let box = [];
-		if (this.props.var2 == true) {
+		if (this.props.var1 == true) {
 			box.push(
-				<View style = {styles.greetingBox2Purple}> 
+				<View style = {styles.greetingBox2Red}> 
 					{ this.b13() } 
 				</View>
 			)
@@ -2003,9 +2129,9 @@ export class Stack extends React.Component {
 	B20()
 	{
 		let box = [];
-		if (this.props.var3 == true) {
+		if (this.props.var2 == true) {
 			box.push(
-				<View style = {styles.greetingBox2Blue}> 
+				<View style = {styles.greetingBox2Purple}> 
 					{ this.b20() } 
 				</View>
 			)
@@ -2079,9 +2205,9 @@ export class Stack extends React.Component {
 	B24()
 	{
 		let box = [];
-		if (this.props.var4 == true) {
+		if (this.props.var3 == true) {
 			box.push(
-				<View style = {styles.greetingBox2Orange}> 
+				<View style = {styles.greetingBox2Blue}> 
 					{ this.b24() } 
 				</View>
 			)
@@ -2155,15 +2281,9 @@ export class Stack extends React.Component {
 	B28()
 	{
 		let box = [];
-		if (this.props.var5 == true) {
+		if (this.props.var4 == true) {
 			box.push(
-				<View style = {styles.greetingBox2Royal}> 
-					{ this.b28() } 
-				</View>
-			)
-		} else if (this.props.var6 == true) {
-			box.push(
-				<View style = {styles.greetingBox2Violet}> 
+				<View style = {styles.greetingBox2Orange}> 
 					{ this.b28() } 
 				</View>
 			)
@@ -2251,6 +2371,32 @@ export class Stack extends React.Component {
 		}
 		return box;
 	};
+
+	B32()
+	{
+		let box = [];
+		if (this.props.var5 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Royal}> 
+					{ this.b32() } 
+				</View>
+			)
+		} else if (this.props.var6 == true) {
+			box.push(
+				<View style = {styles.greetingBox2Violet}> 
+					{ this.b32() } 
+				</View>
+			)
+		} else {
+			box.push(
+				<View style = {styles.greetingBox2}> 
+					{ this.b32() } 
+				</View>
+			)
+		}
+		return box;
+	};
+
 	
 
 render() {
@@ -2288,13 +2434,40 @@ render() {
 			{ this.B29() }
 			{ this.B30() }
 			{ this.B31() }
-
-			<View style = {styles.greetingBox2}> 
-				{ this.b32() }  
-			</View>
+			{ this.B32() }
 	    </View>
     );
   }
+};
+
+export class Output extends React.Component {
+
+	getOut() 
+	{
+		let out = []
+
+		if(this.props.counter == 27)
+		{
+			out.push(
+				<Text style = {styles.greeting}>
+					Monday8pm 4pm
+				</Text>
+			)
+		}
+
+		return out;
+	}
+
+	render() {
+	    return (
+			<View style = {styles.greetingBox1}>
+		        <Text style={styles.greeting}>
+			    	OUTPUT
+			 	</Text>
+			 	{ this.getOut() }
+			</View>
+	    );
+	  }
 };
 
 const ConnectedCode = connect(Code);
@@ -2302,6 +2475,7 @@ const ConnectedComment = connect(Comment);
 const ConnectedControl = connect(Control);
 const ConnectedStack = connect(Stack);
 const ConnectedVar = connect(Var);
+const ConnectedOutput = connect(Output);
 
 
 const styles = StyleSheet.create({
@@ -2333,7 +2507,7 @@ const styles = StyleSheet.create({
   },
   panelCode: {
     // Fill the entire surface
-    width: 700,
+    width: 500,
     height: 400,
     backgroundColor: 'rgba(255, 255, 255, 0.4)',
     alignItems: 'stretch',
@@ -2342,6 +2516,14 @@ const styles = StyleSheet.create({
     // Fill the entire surface
     width: 1000,
     height: 600,
+    backgroundColor: 'rgba(255, 255, 255, 0.4)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+   panelVars: {
+    // Fill the entire surface
+    width: 150,
+    height: 400,
     backgroundColor: 'rgba(255, 255, 255, 0.4)',
     justifyContent: 'center',
     alignItems: 'center',
@@ -2450,3 +2632,4 @@ AppRegistry.registerComponent('ConnectedCode', () => ConnectedCode);
 AppRegistry.registerComponent('ConnectedControl', () => ConnectedControl);
 AppRegistry.registerComponent('ConnectedStack', () => ConnectedStack);
 AppRegistry.registerComponent('ConnectedVar', () => ConnectedVar);
+AppRegistry.registerComponent('ConnectedOutput', () => ConnectedOutput);
