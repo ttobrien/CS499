@@ -11,14 +11,14 @@ function init(bundle, parent, options = {}) {
   });
 
   const commentPanel = new Surface(
-    1000, 
-    600, 
+    525, 
+    500, 
     Surface.SurfaceShape.Flat
   );
 
   commentPanel.setAngle(
-    0.8, 
-    0.2
+    0.85, 
+    0.16
   )
 
   r360.renderToSurface(
@@ -27,14 +27,14 @@ function init(bundle, parent, options = {}) {
   );
 
   const varPanel = new Surface(
-    1000, 
-    600, 
+    250, 
+    450, 
     Surface.SurfaceShape.Flat
   );
 
   varPanel.setAngle(
-    -0.3, 
-    0.2
+    -0.5, 
+    0.22
   )
 
   r360.renderToSurface(
@@ -43,14 +43,14 @@ function init(bundle, parent, options = {}) {
   );
 
   const codePanel = new Surface(
-    1000, 
-    600, 
+    500, 
+    400, 
     Surface.SurfaceShape.Flat
   );
 
   codePanel.setAngle(
-    0.1,
-    0.1
+    0.0,
+    0.22
   )
 
   r360.renderToSurface(
@@ -59,14 +59,14 @@ function init(bundle, parent, options = {}) {
   );
 
   const controlPanel = new Surface(
-    1000, 
-    600, 
+    200, 
+    50, 
     Surface.SurfaceShape.Flat
   );
 
   controlPanel.setAngle(
-    0.3, 
-    0.3
+    -.05, 
+    0.55
   )
 
   r360.renderToSurface(
@@ -82,12 +82,28 @@ function init(bundle, parent, options = {}) {
 
   stackPanel.setAngle(
     0.0, 
-    -0.1
+    -0.15
   )
 
   r360.renderToSurface(
     r360.createRoot('ConnectedStack', {/*initial props*/}),
     stackPanel
+  );
+
+  const outputPanel = new Surface(
+    250, 
+    150, 
+    Surface.SurfaceShape.Flat
+  );
+
+  outputPanel.setAngle(
+    3.14, 
+    0.2
+  )
+
+  r360.renderToSurface(
+    r360.createRoot('ConnectedOutput', {/*initial props*/}),
+    outputPanel
   );
 
 
